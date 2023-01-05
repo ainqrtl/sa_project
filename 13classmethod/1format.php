@@ -17,13 +17,14 @@ class students{
 
 
 //insntansiasi class student
-$students = new students();
+//object saya
+$saya = new students();
 
 
-//memanggil method tampilkannama dari class manusia
-echo $students->tampilhello();
+//memanggil method tampilkannama dari class students
+echo $saya->tampilhello();
 
 echo "<br />";
-echo $students->nama;
+echo $saya->nama;
 echo "<br />";
-echo $students->nilai1;
+echo $saya->nilai1;

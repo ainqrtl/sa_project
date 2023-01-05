@@ -9,21 +9,22 @@ class students{
      //method 
   function berinama($namasiswa){
    $this->nama=$namasiswa;
+   $this->nilai1=40;
 
   }
-
     
 }
 
 
 //insntansiasi class student
-$students = new students();
+$saya = new students();
 
 
 //memanggil method tampilkannama dari class manusia
-$students->berinama("Andi");
+$saya->berinama("Andi");
 
 echo "<br />";
-echo $students->nama;
+echo $saya->nama;
 echo "<br />";
-echo $students->nilai1;
+//error karena nilai1 bersifat private
+echo $saya->nilai1;

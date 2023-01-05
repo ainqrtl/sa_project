@@ -1,5 +1,6 @@
+<!-- read -->
 <?php
-include('koneksi.php');
+include('koneksi.php'); //menyisipkan sebuah file PHP 
 $db = new database();
 $data_barang = $db->tampil_data();
 ?>
@@ -11,10 +12,12 @@ $data_barang = $db->tampil_data();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Data Barang</title>
 </head>
 <body>
+    <!-- create -->
     <a href="add.php">Tambah Data</a>
+    <!-- batas create -->
     <table border="1">
     <tr>
         <th>No</th>
@@ -31,8 +34,10 @@ $data_barang = $db->tampil_data();
             <td><?php echo  $row['nama_barang'];?></td>
             <td><?php echo $row['stok'];?></td>
             <td>
-                <a href="edit.php?id=<?php echo $row['id_barang'];?>">Update | </a>
-                <a href="proses.php?action=delete&id=<?php echo $row['id_barang'];?>">Delete</a>
+                <!-- update -->
+                <a href="edit.php?id=<?php echo $row['id_barang'];?>">Edit | </a>
+                <!-- delete -->
+                <a href="proses.php?action=delete&id=<?php echo $row['id_barang'];?> " onclick="return confirm('Are You Sure?')">Delete</a>
             </td>
         </tr>
         <?php

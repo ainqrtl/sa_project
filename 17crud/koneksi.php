@@ -13,7 +13,9 @@ class database{
             echo "Koneksi database gagal:" .mysqli_connect_error();
         }
     }
+    //batas video koneksi
 
+//read
     function tampil_data()
     {
         $data =mysqli_query($this->koneksi,"select * from tb_barang");
@@ -22,26 +24,31 @@ class database{
         }
         return $hasil;
     }
+//batas read 
 
-
+//create
     function add($nama_barang, $stok){
         mysqli_query($this->koneksi,"insert into tb_barang values ('','$nama_barang','$stok')");
     }
     
-    //3
+    //update
     function get_by_id($id_barang){
         $query = mysqli_query($this->koneksi, "select * from tb_barang where id_barang='$id_barang'");
         return $query->fetch_array();
     }
-//4
+//update
 function update_data($nama_barang, $stok,$id_barang){
     $query=mysqli_query($this->koneksi,"update tb_barang set nama_barang = '$nama_barang', stok = '$stok' where id_barang ='$id_barang'");
 }
 
-//5
+//delete
 function delete_data($id_barang)
 {
     $query=mysqli_query($this->koneksi,"delete from tb_barang where id_barang ='$id_barang'");
 }
 }
 ?>
+
+
+
+

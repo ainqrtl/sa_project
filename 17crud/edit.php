@@ -17,10 +17,10 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Data Barang</title>
+    <title>Edit Data Barang</title>
 </head>
 <body>
-    <h3>Update Data Barang</h3>
+    <h3>Edit Data Barang</h3>
 
     <form method="post" action="proses.php?action=update">
         <input type="hidden" name="id_barang" value="<?php echo $data_barang['id_barang'];?>"/>

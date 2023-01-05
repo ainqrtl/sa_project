@@ -21,7 +21,11 @@ class students{
   //method 
   function berinama($namasiswa){
     $this->nama=$namasiswa;
-
+ 
+ /*
+ Variabel $this merupakan variabel khusus PHP dalam OOP 
+ yang digunakan untuk menunjuk sebuah objek, ketika kita mau mengaksesnya dalam sebuah class. 
+ */
    }
 
  

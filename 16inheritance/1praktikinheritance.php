@@ -1,8 +1,5 @@
 <?php
 //membuat class
-
-use students as GlobalStudents;
-
 class students{
    //property
    public $nama = "Rara";
@@ -15,34 +12,41 @@ class students{
 
    }
 
+  
+
 }
 
 //membuat class turunan atau subclass dari students
 
-class best extends students{
+class friend extends students{
     //property class best
-    public $nama_best;
+    public $nama_teman;
+ 
 
     //method class best
-    function berinamabest($namabest){
-        $this->nama_best =$namabest;
+    function berinamateman($namateman){
+        $this->nama_teman=$namateman;
     }
+
+   
+    
 
 
 }
 
 //insntansiasi class student
-$students = new best();
+$saya = new friend();
 
 
 //memanggil method  dari class manusia
-$students->berinama("Andi");
-$students->berinamabest("Rina");
+$saya->berinama("Andi");
+$saya->berinamateman("Rina");
  
 
 //menampilkan isi property
-echo "Nama Siswa :" .$students->nama."<br>";
-echo "Nama Siswa Terbaik :" .$students->nama_best."<br>";
+echo "Nama Siswa :" .$saya->nama."<br>";
+echo "Nama Teman :" .$saya->nama_teman."<br>";
+
 
 
 
